@@ -1,9 +1,11 @@
 import streamlit as st 
 import random
 con_rank=0
+point_rank=10
+if 'con_rank' not in st.session_state:
+        st.session_state.con_rank = con_rank
 if 'con_rank' not in st.session_state:
     st.session_state.con_rank = con_rank
-
 if 'money' not in st.session_state:
     st.session_state.money = 0
 
