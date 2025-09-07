@@ -1,6 +1,5 @@
 import streamlit as st 
 import random
-
 con_rank=0
 if 'con_rank' not in st.session_state:
     st.session_state.con_rank = con_rank
@@ -11,6 +10,7 @@ if 'money' not in st.session_state:
 
 st.title("パチスロ")
 st.header(f"現在の所持金: {st.session_state.money}円")
+st.header(f"現在の台の設定: {st.session_state.con_rank}段階")
 
 掛け金=st.number_input("掛け金を入力してください（最低10円）", min_value=10, step=10, value=10)
 

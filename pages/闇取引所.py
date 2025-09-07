@@ -8,11 +8,15 @@ if 'con_rank' not in st.session_state:
 st.title("闇取引所")
 st.header(f"現在の所持金: {st.session_state.money}円")
 st.header(f"現在の台の設定: {st.session_state.con_rank}段階")
-
-if st.button("台の設定を上げる（5000円）"):
-    if st.session_state.money >= 5000:
-        st.session_state.money -= 5000
-        st.session_state.con_rank += 1
-        st.success("台の設定を上げました！")
-    else:
-        st.warning("所持金が足りません。")
+if st.session_state.con_rank < 6:
+    st.image(f"rank{st.session_state.con_rank}.png")
+    if st.button("台の設定を上げる（5000円）"):
+        if st.session_state.money >= 5000:
+            st.session_state.money -= 5000
+            st.session_state.con_rank += 1
+            st.success("台の設定を上げました！")
+        else:
+            st.warning("所持金が足りません。")
+else:
+    st.image("rank6.png")
+    st.info("これ以上台の設定を上げることはできません。")
