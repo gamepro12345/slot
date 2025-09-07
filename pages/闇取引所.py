@@ -17,5 +17,4 @@ if st.session_state.con_rank < 6:
         else:
             st.warning("所持金が足りません。")
 else:
-    st.image("rank6.png")
     st.info("これ以上台の設定を上げることはできません。")
