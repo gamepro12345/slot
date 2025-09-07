@@ -24,7 +24,7 @@ if st.button("スロットを回す"):
         slot3 = random.randint(st.session_state.con_rank+1, 7)
         st.write(f"スロットの結果: {slot1} - {slot2} - {slot3}")
         if slot1 == slot2 == slot3:
-            winnings = 掛け金 * 10
+            winnings = 掛け金 * st.session_state.point_rank
             st.session_state.money += winnings
             st.success(f"おめでとうございます！{winnings}円獲得しました！")
         else:
