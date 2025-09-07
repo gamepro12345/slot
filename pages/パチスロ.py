@@ -29,4 +29,3 @@ if st.button("スロットを回す"):
             st.info("残念、もう一度挑戦してください。")
     else:
         st.warning("所持金が足りません。")
-st.image("images.jpg")
