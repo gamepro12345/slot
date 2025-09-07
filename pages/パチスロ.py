@@ -17,9 +17,9 @@ st.header(f"現在の所持金: {st.session_state.money}円")
 if st.button("スロットを回す"):
     if st.session_state.money >= 掛け金:
         st.session_state.money -= 掛け金
-        slot1 = random.randint(con_rank+1, 7)
-        slot2 = random.randint(con_rank+1, 7)
-        slot3 = random.randint(con_rank+1, 7)
+        slot1 = random.randint(st.session_state.con_rank+1, 7)
+        slot2 = random.randint(st.session_state.con_rank+1, 7)
+        slot3 = random.randint(st.session_state.con_rank+1, 7)
         st.write(f"スロットの結果: {slot1} - {slot2} - {slot3}")
         if slot1 == slot2 == slot3:
             winnings = 掛け金 * 10
