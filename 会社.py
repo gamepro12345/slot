@@ -13,7 +13,7 @@ st.title("会社")
 st.header(f"現在のランク: {st.session_state.rank}")
 
 # 画像を表示（例: rank.png）
-st.image("ビル.png")
+
 
 st.header(f"現在の所持金: {st.session_state.money}円")
 if st.button("お金を稼ぐ"):
@@ -24,3 +24,4 @@ if st.session_state.worked >= 15:
     st.session_state.rank += 1
     st.session_state.worked = 0
     st.success("ランクアップしました！")
+st.image("ビル.png")
