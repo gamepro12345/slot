@@ -40,9 +40,9 @@ if st.session_state.money >= 10000000000:
     if st.button("超・鬼畜パチンコに挑戦する"):
         if st.session_state.money >= 掛け金:
             st.session_state.money -= 掛け金
-            slot1 = random.randint(1, 100)
-            slot2 = random.randint(1, 100)
-            slot3 = random.randint(1, 100)
+            slot1 = 1#random.randint(1, 100)
+            slot2 = 1#random.randint(1, 100)
+            slot3 = 1#random.randint(1, 100)
             result_area = st.empty()
             result_area.write(f"スロットの結果: {slot1}")
             time.sleep(0.7)
