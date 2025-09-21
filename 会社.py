@@ -17,7 +17,7 @@ st.header(f"現在のランク: {st.session_state.rank}")
 
 st.header(f"現在の所持金: {st.session_state.money}円")
 if st.button("お金を稼ぐ"):
-    st.session_state.money += st.session_state.rank+10000000000000
+    st.session_state.money += st.session_state.rank+10
     st.session_state.worked += 1
 
 if st.session_state.worked >= 15:
