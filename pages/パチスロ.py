@@ -31,6 +31,7 @@ if st.button("スロットを回す"):
             winnings = 掛け金 * st.session_state.point_rank
             st.session_state.money += winnings
             st.success(f"おめでとうございます！{winnings}円獲得しました！")
+            st.balloons()
         else:
             st.info("残念、もう一度挑戦してください。")
     else:
