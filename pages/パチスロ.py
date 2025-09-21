@@ -36,3 +36,30 @@ if st.button("スロットを回す"):
             st.info("残念、もう一度挑戦してください。")
     else:
         st.warning("所持金が足りません。")
+if st.session_state.money >= 10000000000:
+    if st.button("超・鬼畜パチンコに挑戦する"):
+        if st.session_state.money >= 掛け金:
+            st.session_state.money -= 掛け金
+            slot1 = random.randint(1, 100)
+            slot2 = random.randint(1, 100)
+            slot3 = random.randint(1, 100)
+            result_area = st.empty()
+            result_area.write(f"スロットの結果: {slot1}")
+            time.sleep(0.7)
+            result_area.write(f"スロットの結果: {slot1} - {slot2}")
+            time.sleep(0.7)
+            result_area.write(f"スロットの結果: {slot1} - {slot2} - {slot3}")
+            if slot1 == slot2 == slot3:
+                winnings = 掛け金 * 9999999999999
+                st.session_state.money += winnings
+                st.success(f"おめでとうございます！{winnings}円獲得しました！")
+                st.balloons()
+                st.balloons()
+                st.balloons()
+                st.balloons()
+                st.balloons()
+                st.balloons()
+            else:
+                st.info("残念、もう一度挑戦してください。")
+        else:
+            st.warning("所持金が足りません。")
